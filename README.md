@@ -35,8 +35,7 @@ react-chartjs-2@5.0.1
 
 
 #### 실행
-
-![image-20221213194140646](C:\Users\pshno\Desktop\pyshh\한입 크기로 잘라 먹는 리액트(React.js)\프로젝트1\simplediary\README.assets\image-20221213194140646.png)
+![image-20221213194140646](https://user-images.githubusercontent.com/109335369/207298476-0a6a172a-108b-440f-a67b-31c0833b62a5.png)
 
 - chart
 
