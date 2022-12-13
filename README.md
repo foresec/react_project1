@@ -40,8 +40,7 @@ react-chartjs-2@5.0.1
 - chart
 
 
-
-![image-20221213194339835](C:\Users\pshno\Desktop\pyshh\한입 크기로 잘라 먹는 리액트(React.js)\프로젝트1\simplediary\README.assets\image-20221213194339835.png)
+![image-20221213194339835](https://user-images.githubusercontent.com/109335369/207298616-ae1c0c0b-63bd-4a75-a579-185dee8ae6d9.png)
 
 - editor
 
