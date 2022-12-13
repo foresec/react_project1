@@ -1,10 +1,12 @@
-import React, {useCallback, useMemo, useEffect, useRef, useReducer} from "react"
+import React, {useCallback, useMemo, useEffect, useRef, useReducer, useState} from "react"
 
 import './App.css';
 import DiaryEditor from './DiaryEditor';
 import DiaryList from './DiaryList';
 // import OptimizeTest from "./OptimizeTest";
 // import Lifecycle from './Lifecycle';
+
+import DoughnutGraph from './DoughnutGraph'
 
 
 const reducer = (state, action) => {
@@ -109,6 +111,13 @@ function App() {
 
   const {goodCount, badCount, goodRatio} = getDiaryAnalysys
 
+
+
+  const [isEditor, setIsEditor] = useState(false)
+  const toggleIsEditor = () => setIsEditor(!isEditor)
+
+
+
   // 자식요소에 추가
   return (
     <DiaryStateContext.Provider value={data}>
@@ -116,11 +125,26 @@ function App() {
         <div className="App">
           {/* <OptimizeTest/> */}
           {/* <Lifecycle /> */}
-          <DiaryEditor onCreate={onCreate}/>
-          <div>전체 일기 : {data.length}</div>
-          <div>기분 좋은 일기 개수 : {goodCount}</div>
-          <div>기분 나쁜 일기 개수 : {badCount}</div>
-          <div>기분 좋은 일기 비율 : {goodRatio}</div>
+          {isEditor ? (
+            <><button onClick={toggleIsEditor}>HOME</button></>
+            ) : (
+            <><button onClick={toggleIsEditor}>START</button></>
+          )}
+          <div className="container">
+            {isEditor ? (
+              <>
+                <DiaryEditor onCreate={onCreate}/>
+              </>
+              ) : (
+              <div className="DoughnutContainer"><DoughnutGraph /></div>
+            )}
+          </div>
+          <div>
+            <div>전체 일기 : {data.length}</div>
+            <div>기분 좋은 일기 개수 : {goodCount}</div>
+            <div>기분 나쁜 일기 개수 : {badCount}</div>
+            <div>기분 좋은 일기 비율 : {goodRatio}</div>
+          </div>
           <DiaryList onEdit={onEdit} onRemove={onRemove} />
         </div>
       </DiaryDispatchContext.Provider>

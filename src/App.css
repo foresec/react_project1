@@ -1,5 +1,5 @@
 .DiaryEditor {
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   text-align: center;
   padding: 20px;
 }
@@ -63,4 +63,17 @@ textarea {
   font-weight: bold;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.DoughnutContainer {
+  width: 412px;
+  margin: 30px;
 }

@@ -40,6 +40,8 @@ const DiaryEditor = ({}) => {
       content:"",
       emotion: 1,
     })
+    // toggleIsEditor()
+
   }
 
   return (
